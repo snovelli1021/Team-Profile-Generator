@@ -75,7 +75,7 @@ function createEmployee() {
       employeePrompt.email,
       employeePrompt.id,
       employeePrompt.role,
-      managerAnswer.officeNum
+      managerAnswer.officeNumber
     );
     managersArr.push(manager);
   } else if (employeePrompt.role === "Engineer") {
@@ -85,7 +85,7 @@ function createEmployee() {
       employeePrompt.email,
       employeePrompt.id,
       employeePrompt.role,
-      engineerAnswer.github
+      engineerAnswer.gitHubProfile
     );
     engineersArr.push(engineer);
   } else if (employeePrompt.role === "Intern") {
@@ -110,7 +110,7 @@ function createEmployee() {
     generateHTML(managersArr, engineersArr, internsArr);
   } else {
     console.log(
-      "Please ensure you have at lease one Manager AND at least one Engineer before selecting 'Yes' again."
+      "Please ensure you have at lease one Manager AND one Engineer before selecting 'Yes' again."
     );
     return createEmployee();
   }
