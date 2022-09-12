@@ -1,4 +1,5 @@
 const Manager = require("../Manager");
+const createManager = require("./index.html");
 
 describe("Manager Test", () => {
   it("should getRole() as Manager.", () => {

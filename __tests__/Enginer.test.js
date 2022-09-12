@@ -11,7 +11,7 @@ describe("Engineer Test", () => {
     );
     expect(stephen.getRole()).toBe("Engineer");
   });
-  it("should getGithubProfile() as input Github profile.", () => {
+  it("should getGitHubProfile() as input GitHub profile.", () => {
     const stephen = new Engineer(
       "Stephen",
       "stephen@email.com",
@@ -19,6 +19,6 @@ describe("Engineer Test", () => {
       "Engineer",
       "stephen123"
     );
-    expect(stephen.getGithubProfile()).toBe("stephen1021");
+    expect(stephen.getGitHubProfile()).toBe("stephen1021");
   });
 });
