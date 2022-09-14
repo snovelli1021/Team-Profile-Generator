@@ -6,7 +6,7 @@ The team profile generator uses inquirer to promp a user to add a class of Emplo
 
 [GitHub Repo: ](https://github.com/snovelli1021/Team-Profile-Generator)
 
-[GitHub Pages: ]()
+[GitHub Pages: ](https://snovelli1021.github.io/Team-Profile-Generator/)
 
 ![Screenshot of deployed page](./assets/screenshot.jpg)
 
