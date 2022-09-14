@@ -10,4 +10,4 @@ The team profile generator uses inquirer to promp a user to add a class of Emplo
 
 ![Screenshot of deployed page](./assets/screenshot.jpg)
 
-[Screencastify Video Demo: ]()
+[Screencastify Video Demo: ](https://drive.google.com/file/d/1pMH3XXiEWhYkHM-_6MY_O0QQhSXBJ6-P/view)
