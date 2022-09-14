@@ -1,4 +1,4 @@
-const Employee = require("../Employee");
+const Employee = require("../lib/Employee");
 
 describe("Employee Test", () => {
   it("should getName() as input name.", () => {

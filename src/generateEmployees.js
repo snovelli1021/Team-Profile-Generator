@@ -68,8 +68,8 @@ async function createEmployee() {
   let employeePrompt = await defineEmployeePrompt();
   let employee = new Employee(
     employeePrompt.name,
-    employeePrompt.id,
     employeePrompt.email,
+    employeePrompt.id,
     "Employee"
   );
 
@@ -77,8 +77,8 @@ async function createEmployee() {
     let managerAnswer = await managerPrompt();
     let manager = new Manager(
       employeePrompt.name,
-      employeePrompt.id,
       employeePrompt.email,
+      employeePrompt.id,
       employeePrompt.role,
       managerAnswer.officeNumber
     );
@@ -87,8 +87,8 @@ async function createEmployee() {
     let engineerAnswer = await engineerPrompt();
     let engineer = new Engineer(
       employeePrompt.name,
-      employeePrompt.id,
       employeePrompt.email,
+      employeePrompt.id,
       employeePrompt.role,
       engineerAnswer.gitHubProfile
     );
@@ -97,8 +97,8 @@ async function createEmployee() {
     let internAnswer = await internPrompt();
     let intern = new Intern(
       employeePrompt.name,
-      employeePrompt.id,
       employeePrompt.email,
+      employeePrompt.id,
       employeePrompt.role,
       internAnswer.school
     );
@@ -115,7 +115,7 @@ async function createEmployee() {
     generateHTML(managersArr, engineersArr, internsArr);
   } else {
     console.log(
-      "Please make sure you have at lease one Manager AND one Engineer before selecting 'Yes' again."
+      "Please make sure you have at lease one Manager and one Engineer before you continue."
     );
     await createEmployee();
   }

@@ -1,4 +1,4 @@
-const Engineer = require("../Engineer");
+const Engineer = require("../lib/Engineer");
 
 describe("Engineer Test", () => {
   it("should getRole() as Engineer.", () => {
@@ -17,7 +17,7 @@ describe("Engineer Test", () => {
       "stephen@email.com",
       "1",
       "Engineer",
-      "stephen123"
+      "stephen1021"
     );
     expect(stephen.getGitHubProfile()).toBe("stephen1021");
   });
