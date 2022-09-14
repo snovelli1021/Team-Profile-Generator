@@ -20,7 +20,7 @@ function userInput() {
   ]);
 }
 
-function employeePrompt() {
+function defineEmployeePrompt() {
   return inquirer.prompt([
     {
       name: "role",
@@ -65,7 +65,7 @@ function internPrompt() {
 }
 
 function createEmployee() {
-  let employeePrompt = employeePrompt();
+  let employeePrompt = defineEmployeePrompt();
   let employee = new Employee(
     employeePrompt.name,
     employeePrompt.email,
@@ -117,6 +117,7 @@ function createEmployee() {
     console.log(
       "Please make sure you have at lease one Manager AND one Engineer before selecting 'Yes' again."
     );
+    return createEmployee();
   }
 }
 
