@@ -64,49 +64,49 @@ function internPrompt() {
   ]);
 }
 
-function createEmployee() {
-  let employeePrompt = defineEmployeePrompt();
+async function createEmployee() {
+  let employeePrompt = await defineEmployeePrompt();
   let employee = new Employee(
     employeePrompt.name,
-    employeePrompt.email,
     employeePrompt.id,
+    employeePrompt.email,
     "Employee"
   );
 
   if (employeePrompt.role === "Manager") {
-    let managerAnswer = managerPrompt();
+    let managerAnswer = await managerPrompt();
     let manager = new Manager(
       employeePrompt.name,
-      employeePrompt.email,
       employeePrompt.id,
+      employeePrompt.email,
       employeePrompt.role,
       managerAnswer.officeNumber
     );
     managersArr.push(manager);
   } else if (employeePrompt.role === "Engineer") {
-    let engineerAnswer = engineerPrompt();
+    let engineerAnswer = await engineerPrompt();
     let engineer = new Engineer(
       employeePrompt.name,
-      employeePrompt.email,
       employeePrompt.id,
+      employeePrompt.email,
       employeePrompt.role,
       engineerAnswer.gitHubProfile
     );
     engineersArr.push(engineer);
   } else if (employeePrompt.role === "Intern") {
-    let internAnswer = internPrompt();
+    let internAnswer = await internPrompt();
     let intern = new Intern(
       employeePrompt.name,
-      employeePrompt.email,
       employeePrompt.id,
+      employeePrompt.email,
       employeePrompt.role,
       internAnswer.school
     );
     internsArr.push(intern);
   }
-  let employeeEntry = userInput();
+  let employeeEntry = await userInput();
   if (employeeEntry.lastEntry === "No") {
-    return createEmployee();
+    await createEmployee();
   } else if (
     employeeEntry.lastEntry === "Yes" &&
     managersArr.length > 0 &&
@@ -117,7 +117,7 @@ function createEmployee() {
     console.log(
       "Please make sure you have at lease one Manager AND one Engineer before selecting 'Yes' again."
     );
-    return createEmployee();
+    await createEmployee();
   }
 }
 

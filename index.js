@@ -16,8 +16,8 @@ function writeToFile(data) {
   });
 }
 
-function init() {
-  createEmployee();
+async function init() {
+  await createEmployee();
   writeToFile(generateHTML(managersArr, engineersArr, internsArr));
 }
 

@@ -10,7 +10,7 @@ function createIntern(intern) {
   return `<div class="card" style="width: 18rem;"><div class="card-header">${intern.role}</div><ul class="list-group list-group-flush"><li class="list-group-item">Name: ${intern.name}</li><li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></ali><li class="list-group-item">Employee ID: ${intern.id}</li><li class="list-group-item">School: ${intern.school}</li></ul></div><br />`;
 }
 
-function createHTML(managers, engineers, interns) {
+function generateHTML(managers, engineers, interns) {
   return `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -51,5 +51,5 @@ module.exports = {
   createManager,
   createEngineer,
   createIntern,
-  createHTML,
+  generateHTML,
 };
